@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$USER_HOME$/OneDrive/Bureau/CDA/CV/.idea/CV.iml" filepath="$USER_HOME$/OneDrive/Bureau/CDA/CV/.idea/CV.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../EvalPHP/.idea/EvalPHP.iml" filepath="$PROJECT_DIR$/../EvalPHP/.idea/EvalPHP.iml" />
+      <module fileurl="file://$USER_HOME$/OneDrive/Bureau/CDA/FinalJS/.idea/FinalJS.iml" filepath="$USER_HOME$/OneDrive/Bureau/CDA/FinalJS/.idea/FinalJS.iml" />
+      <module fileurl="file://$USER_HOME$/OneDrive/Bureau/CDA/PHPexo/.idea/PHP exo.iml" filepath="$USER_HOME$/OneDrive/Bureau/CDA/PHPexo/.idea/PHP exo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SessionPHP.iml" filepath="$PROJECT_DIR$/.idea/SessionPHP.iml" />
+    </modules>
+  </component>
+</project>

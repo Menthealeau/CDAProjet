@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Exercice JS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <div>
+            
+            <h1>Selectionner l'exercice Javascript à executer</h1>
+            <select name="exo" id="exo">
+                <option value="info" id="info" selected>Entrée vos informations</option>
+                <option value="operateur" id="operateur">Les differents opérateurs</option>
+                <option value="parite" id="parite">Pair ou Impair</option>
+                <option value="age" id="age">Mineur/Majeur</option>
+                <option value="calculatrice" id="calculatrice">Calculatrice</option>
+                <option value="remise" id="remise">Calcul de la remise</option>
+                <option value="participation" id="participation">Participation des repas</option>
+                <option value="saisie" id="saisie">Ecrire plusieurs prenoms</option>
+                <option value="inferieur" id="inferieur">Tout les nombres inférieurs</option>
+                <option value="interval" id="interval">Somme des intervales</option>
+                <option value="moyenne" id="moyenne">Moyenne de la somme</option>
+                <option value="minmax" id="minmax">Mini et maxi</option>
+                <option value="multiple" id="multiple">Table de multiplication</option>
+                <option value="voyelle" id="voyelle">Combien de voyelle ?</option>
+                <option value="jeumoyvie" id="jeumoyvie">Calcul du nombre de jeunes, de moyens et de vieux</option>
+                <option value="nbpremier" id="nbpremier">Le nombre est-il premier?</option>
+                <option value="nbmagic" id="nbmagic">Jeu du nombre magique</option>
+                <option value="produit" id="produit">Produit de deux nombres</option>
+                <option value="image" id="image">Afficher l'image</option>
+                <option value="compte" id="compte">Combien il y a de fois la lettre ?</option>
+                <option value="strtok" id="strtok">Une donnée parmis plusieurs ?</option>
+                <option value="tableau" id="tableau">Tableau de données basique</option>
+                <option value="menutableau" id="menutableau">Jouons avec les données des tableaux</option>
+                <option value="supptableau" id="supptableau">Effacer le nom d'un tableau</option>
+                <option value="veriform" id="veriform">Vérification d'un formulaire</option>
+            </select>
+            <input type="button" value="Valider" id="btnexo" onclick="recuperation()">
+            <input type="reset" value="Annuler" onclick="supp()">
+        </div><br/>
+        
+        <div id ="resultat">
+                
+            
+        </div>
+        <div class="modal fade bd-example-modal-lg" id="modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+
+                    <div class="col-12 h-10 rounded " id="divalide">
+                        <p id="validation" class="validation text-center"></p>
+
+                    </div>
+                    <div class="col-12">
+
+                        <form action='#divalide' id="formulaire_contact">
+
+                                <h2>Vos Coordonnées</h2>
+                                <h6 class="text-danger">* Ces zones sont obligatoires pour valider le formulaire</h6>
+                                <div class="row">
+                                    <div class="col-10 pt-2 ">
+                                        <label for="societe">Société: *</label>
+                                        <input type="text" class="form-control" placeholder="Power" id="societe" name="societe">
+                                        <span id="errsociete"></span>
+                                    </div>
+                                    <div class="col-2 gif pt-2 pl-2">
+                                        <img src="" alt="" id="imgsociete">
+                                    </div>
+                                    <div class="col-10 pt-2 ">
+                                        <label for="perscon">Personne à contacter: *</label>
+                                        <input type="text" class="form-control" placeholder="Ranger" id="perscon" name="perscon">
+                                        <span id="errpers"></span>
+                                    </div>
+                                    <div class="col-2 gif pt-2 pl-2">
+                                        <img src="" alt="" id="imgpers">
+                                    </div>
+                                    <div class="col-10 pt-2 ">
+                                        <label for="add">Adresse de l'entreprise:</label>
+                                        <textarea id="add" name="adresse" class="form-control" placeholder="23 rue des parpings"></textarea>
+                                        <span id="erradd"></span>
+                                    </div>
+                                    <div class="col-2 gif pt-2 pl-2">
+                                        <img src="" alt="" id="imgadd">
+                                    </div>
+                                    <div class="col-10 pt-2 ">
+                                        <label for="cp">Code Postal: * </label>
+                                        <input type="text" name="cp" class="form-control" placeholder="80000" id="cp">
+                                        <span id="errcp"></span>
+                                    </div>
+                                    <div class="col-2 gif pt-2 pl-2">
+                                        <img src="" alt="" id="imgcp">
+                                    </div>
+                                    <div class="col-10 pt-2 ">
+                                        <label for="ville">Ville: * </label>
+                                        <input type="text" class="form-control" id="ville" placeholder="Amiens" name="ville">
+                                        <span id="errville"></span>
+                                    </div>
+                                    <div class="col-2 gif pt-2 pl-2">
+                                        <img src="" alt="" id="imgville">
+                                    </div>
+                                    <div class="col-10 pt-2 ">
+                                        <label for="mail">E-Mail: * </label>
+                                        <input type="email" name="mail" class="form-control" id="mail" placeholder="forcejaune@afpa.fr">
+                                        <span id="erremail"></span>
+                                    </div>
+                                    <div class="col-2 gif pt-2 pl-2">
+                                        <img src="" alt="" id="imgmail">
+                                    </div>
+                                    <div class="col-10 pt-2 ">
+                                        <label for="tel">Téléphone:</label>
+                                        <input type="text" id="tel" name="tel" class="form-control" placeholder="0521513151">
+                                        <span id="errtel"></span>
+                                    </div>
+                                    <div class="col-2 gif pt-2 pl-2">
+                                        <img src="" alt="" id="imgtel">
+                                    </div>
+                                    <div class="col-10 pt-4">
+                                        <div class="row">
+                                            <div class="col-4">
+                                        <label for="projet">Sélectionner l'environnement technique du projet :</label>
+                                        <select name="environement" id="environ">
+                                            <option value="choisissez" id="choisissez" selected>Choisissez</option>
+                                            <option value="Access" id="php">Access</option>
+                                            <option value="Java" id="js">Java</option>
+                                            <option value="Delphi" id="delphi">Delphi</option>
+                                            <option value="Windev" id="Windev">Windev</option>
+                                            <option value="Visual Basic" id="Visual Basic">Visual Basic</option>
+                                            <option value="Power Builder" id="Power Builder">Power Builder</option>
+                                            <option value="Internet" id="Internet">Internet</option>
+                                            <option value="Intranet" id="ntranet">Intranet</option>
+                                            <option value="Windows NT" id="Windows NT">Windows NT</option>
+                                            <option value="unix" id="Unix">Unix</option>
+                                            <option value="SQL Server" id="SQL Server">SQL Server</option>
+                                            <option value="Oracle" id="Oracle">Oracle</option>
+                                            <option value="autres" id="autres">Autres</option>
+                                        </select>
+                                            </div>
+                                            <div class="col-8">
+                                        <textarea name="projet" id="projet" cols="56" rows="5"></textarea>
+                                                <span id="errdesc"></span>
+
+                                            </div>
+                                            <div class="col-8 offset-4">
+                                                <img src="" alt="" id="imgdesc">
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+
+
+                                </div>
+                                <div class="col-12 mt-2 d-flex align-items-center justify-content-center">
+                                    <button type="button" id="valider" class="btn btn-primary valider">Valider</button>
+                                    <button type="reset" id="reset" class="btn btn-danger ml-2 effacer">Effacer</button>
+                                </div>
+                        </form>
+                        <br/>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+            <script src="assets/Js/js.js"></script>
+        <script src="assets/Js/correctionform.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+    </body>
+</html>
