@@ -11,7 +11,7 @@ Velvet est un projet dans le cadre d'une formation qui consiste à crée un site
 
 # Intégration
 
-Pour avoir un rendu dans l'intégralité du projet , vous trouverez la base de donnée à importer dans 'assets/db/record.sql' ne pas oublier de l'importer.
+Pour avoir un rendu dans l'intégralité du projet , vous trouverez la base de donnée dans 'assets/db/record.sql' ne pas oublier de l'importer.
 
 # Rendu
 
